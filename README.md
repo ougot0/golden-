@@ -45,6 +45,10 @@ Principes :
 - **Hors ligne** : lieux favoris et séances stockés avec coordonnées et fuseau (SwiftData). Seules la recherche de lieux et le géocodage inverse nécessitent le réseau (services Apple gratuits).
 - **Batterie** : pas de suivi de position continu (une requête ponctuelle), magnétomètre actif uniquement quand la boussole est affichée et l'app au premier plan.
 
+## Publier sans Mac
+
+Voir [docs/GUIDE_SANS_MAC.md](docs/GUIDE_SANS_MAC.md) : compilation, signature et envoi sur TestFlight par GitHub Actions (`.github/workflows/testflight.yml`), test sur iPhone via TestFlight.
+
 ## Compiler et installer
 
 Prérequis : Mac avec **Xcode 16** ou plus récent, iOS 17 minimum sur l'iPhone.
