@@ -1,0 +1,774 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05221B9D030003BBDE57F974 /* SessionEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D81CEC79993A10D34F43E9 /* SessionEditorView.swift */; };
+		0E93A6E4FC22BC9082090153 /* PlaceSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A7A96E12A50A669DC2EBE /* PlaceSearchService.swift */; };
+		10893828EF4C8042982D6EBC /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0725CCE727E42120544EB /* CompassView.swift */; };
+		1536A7944174924EC8219AD6 /* CompassDial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869ADB94E31D6848F7529A93 /* CompassDial.swift */; };
+		165E25CE7E514035F388B71E /* SavedPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AFD9DBF49D7ADF4F9F85A8 /* SavedPlace.swift */; };
+		192699F03005C6A1BB833756 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = D839E7D4C01F7DEF8E383BF6 /* Components.swift */; };
+		21CA6C6D5D68D2583268E672 /* PlacePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162DA9C2C39E4A74087A67A4 /* PlacePickerView.swift */; };
+		258716B8CF7168A62433CF7E /* SessionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA21132B4C8BA5C427FD98F /* SessionDetailView.swift */; };
+		2A8084802B703DEA42EC707D /* ManualCoordinateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8AB5624992CC15B937C06D /* ManualCoordinateView.swift */; };
+		2B06F4D1B75F1593E5121D03 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD23D71FB0EC7C5A3B74102 /* LocationService.swift */; };
+		3332455E2EBF294C21757786 /* GoldenHourCore in Frameworks */ = {isa = PBXBuildFile; productRef = CC3FD25C0E45D9E6AB960F29 /* GoldenHourCore */; };
+		3B872EF59653671D0B6ECB07 /* AppLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3BCE9BF3BC56168BBC6518 /* AppLogicTests.swift */; };
+		3B98161FBDF7C54ADE5F83D3 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 12C5D566FD0B104478D7A627 /* PrivacyInfo.xcprivacy */; };
+		3D2E2B7B2A6AC6EBD57CC5C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1D07E75824D74EE330AC8F /* Assets.xcassets */; };
+		43AF3D52D6182AF5785D63ED /* GoldenHourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C84EA8BAAB2647765F440 /* GoldenHourUITests.swift */; };
+		49A9E52E166DEE5FBC0FF218 /* ActivePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC47D3159BD7C42DCF7040 /* ActivePlace.swift */; };
+		6FB7CD062962A589EF7102A5 /* GoldenHourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F59016B18E2A0C0EF551925 /* GoldenHourApp.swift */; };
+		70215D99F9D11CA9D2ECAF18 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D9CBC1119E2858AC3E2AD1 /* AppModel.swift */; };
+		8006835E92C2CC18F63622D9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE11D5A1314B7034274D8A6 /* RootView.swift */; };
+		8317860FF6D54375EEBE6D31 /* SolarStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D565B3AEBFA2C193E949DF /* SolarStrings.swift */; };
+		87D5B5C16D8A6D75F26F8BD7 /* SolarDayDetailSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327F40BC5F3EF514541848D /* SolarDayDetailSections.swift */; };
+		920C4E985BFB3156EC33ABF4 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F368938F15DD66D1BBDB2158 /* Palette.swift */; };
+		94765178B8053D37FADB57DB /* SessionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CFA6608C3A8FF8E9A79E93 /* SessionsListView.swift */; };
+		B25B118D1D0776BEA435F4D6 /* PlacesManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED48850218FAC1B71C4064 /* PlacesManagementView.swift */; };
+		B7BE939ABA67E82F7FBF53E5 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE844CC7B1C90BEF9189EA21 /* AppSettings.swift */; };
+		B851E6DFE40287FB9878B7A3 /* InformationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341A2A1941288CB290E5F66 /* InformationViews.swift */; };
+		BDAA6D4FD460CC1A970685CF /* DayTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22AC86637DFA89DD6EF226 /* DayTimelineView.swift */; };
+		C0C677A812F3DCB825253466 /* SolarCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39080FD5F714A091A045B4C /* SolarCalendarView.swift */; };
+		D5BCFCFDFA019D11A9370974 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8C1064211F6A988BCA301 /* NotificationService.swift */; };
+		DA61E5A27A569E3EA3606B2B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D63C1A0F14A5AB1A0687DDB /* SettingsView.swift */; };
+		DBE86F73D633962D0F9FDA6A /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E222319DA4D4D1499F1E80 /* NotificationSettingsView.swift */; };
+		EAD74C9785147CD9412AAD9E /* SolarEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 961AABA627F05FF29E655193 /* SolarEngine */; };
+		EEF3BCD3D841BB7A913963E7 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823ABF0CF54812E185AFFA /* DashboardView.swift */; };
+		F40AE904711654A556C9E3CA /* PhotoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF6D8159412B83359BD8C44 /* PhotoSession.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B3FA7CB40BE65EF2AF85E0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53263DD71922356D140FE775 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18D8624F5905E13718CF3786;
+			remoteInfo = GoldenHour;
+		};
+		DAB0EC15882E0F983979E591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53263DD71922356D140FE775 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18D8624F5905E13718CF3786;
+			remoteInfo = GoldenHour;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008A7A96E12A50A669DC2EBE /* PlaceSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchService.swift; sourceTree = "<group>"; };
+		08C0725CCE727E42120544EB /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
+		1058C10DBF0A707047763B3B /* GoldenHour.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GoldenHour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12C5D566FD0B104478D7A627 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		1341A2A1941288CB290E5F66 /* InformationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViews.swift; sourceTree = "<group>"; };
+		162DA9C2C39E4A74087A67A4 /* PlacePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePickerView.swift; sourceTree = "<group>"; };
+		1AED48850218FAC1B71C4064 /* PlacesManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesManagementView.swift; sourceTree = "<group>"; };
+		1D63C1A0F14A5AB1A0687DDB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1DDC47D3159BD7C42DCF7040 /* ActivePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePlace.swift; sourceTree = "<group>"; };
+		2D8AB5624992CC15B937C06D /* ManualCoordinateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCoordinateView.swift; sourceTree = "<group>"; };
+		2F3BCE9BF3BC56168BBC6518 /* AppLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogicTests.swift; sourceTree = "<group>"; };
+		2FF6D8159412B83359BD8C44 /* PhotoSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSession.swift; sourceTree = "<group>"; };
+		40A8C1064211F6A988BCA301 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		41CFA6608C3A8FF8E9A79E93 /* SessionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsListView.swift; sourceTree = "<group>"; };
+		58E222319DA4D4D1499F1E80 /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
+		5AE11D5A1314B7034274D8A6 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		60E08D84BD0EE2C7A48C9932 /* GoldenHourKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoldenHourKit; path = Packages/GoldenHourKit; sourceTree = SOURCE_ROOT; };
+		6327F40BC5F3EF514541848D /* SolarDayDetailSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarDayDetailSections.swift; sourceTree = "<group>"; };
+		79D9CBC1119E2858AC3E2AD1 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		869ADB94E31D6848F7529A93 /* CompassDial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassDial.swift; sourceTree = "<group>"; };
+		87D565B3AEBFA2C193E949DF /* SolarStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarStrings.swift; sourceTree = "<group>"; };
+		8F59016B18E2A0C0EF551925 /* GoldenHourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenHourApp.swift; sourceTree = "<group>"; };
+		9BD23D71FB0EC7C5A3B74102 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		9E4C84EA8BAAB2647765F440 /* GoldenHourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenHourUITests.swift; sourceTree = "<group>"; };
+		A39080FD5F714A091A045B4C /* SolarCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarCalendarView.swift; sourceTree = "<group>"; };
+		A8AFD9DBF49D7ADF4F9F85A8 /* SavedPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlace.swift; sourceTree = "<group>"; };
+		AD9138880D930162B871FDDC /* GoldenHourTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GoldenHourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B21799846E8CC7BF3DD12F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B5823ABF0CF54812E185AFFA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		BA1D07E75824D74EE330AC8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5D81CEC79993A10D34F43E9 /* SessionEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEditorView.swift; sourceTree = "<group>"; };
+		D839E7D4C01F7DEF8E383BF6 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		DD22AC86637DFA89DD6EF226 /* DayTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTimelineView.swift; sourceTree = "<group>"; };
+		DE844CC7B1C90BEF9189EA21 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		F368938F15DD66D1BBDB2158 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		F40C9D531343676A4A789066 /* GoldenHourUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GoldenHourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA21132B4C8BA5C427FD98F /* SessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C8D21C0321A123C91AEDE61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAD74C9785147CD9412AAD9E /* SolarEngine in Frameworks */,
+				3332455E2EBF294C21757786 /* GoldenHourCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33DC7812A9FD6B9C54681591 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1341A2A1941288CB290E5F66 /* InformationViews.swift */,
+				58E222319DA4D4D1499F1E80 /* NotificationSettingsView.swift */,
+				1AED48850218FAC1B71C4064 /* PlacesManagementView.swift */,
+				1D63C1A0F14A5AB1A0687DDB /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		470B79AFB5144FC3096C6683 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				79D9CBC1119E2858AC3E2AD1 /* AppModel.swift */,
+				8F59016B18E2A0C0EF551925 /* GoldenHourApp.swift */,
+				5AE11D5A1314B7034274D8A6 /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		54E5B064D07E668FEA8642ED = {
+			isa = PBXGroup;
+			children = (
+				C636B4CC056A055C0A531483 /* GoldenHour */,
+				F609230B15A4121666CDFAD4 /* GoldenHourTests */,
+				D9942583F96095A53414B98E /* GoldenHourUITests */,
+				A3415C81B5E97FCE22C5EDD0 /* Packages */,
+				A649891362A6DA6769D942BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6FF568E50770E5F33910EFDD /* Planner */ = {
+			isa = PBXGroup;
+			children = (
+				FAA21132B4C8BA5C427FD98F /* SessionDetailView.swift */,
+				C5D81CEC79993A10D34F43E9 /* SessionEditorView.swift */,
+				41CFA6608C3A8FF8E9A79E93 /* SessionsListView.swift */,
+			);
+			path = Planner;
+			sourceTree = "<group>";
+		};
+		7F578C4429780654214A89B6 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				D839E7D4C01F7DEF8E383BF6 /* Components.swift */,
+				F368938F15DD66D1BBDB2158 /* Palette.swift */,
+				87D565B3AEBFA2C193E949DF /* SolarStrings.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		828B5881F935E161056A34B9 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				2D8AB5624992CC15B937C06D /* ManualCoordinateView.swift */,
+				162DA9C2C39E4A74087A67A4 /* PlacePickerView.swift */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		9859ADD6BF7C904EFC970068 /* Compass */ = {
+			isa = PBXGroup;
+			children = (
+				869ADB94E31D6848F7529A93 /* CompassDial.swift */,
+				08C0725CCE727E42120544EB /* CompassView.swift */,
+			);
+			path = Compass;
+			sourceTree = "<group>";
+		};
+		9E08810C7768883B59C75333 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				A39080FD5F714A091A045B4C /* SolarCalendarView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		A3415C81B5E97FCE22C5EDD0 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				60E08D84BD0EE2C7A48C9932 /* GoldenHourKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		A649891362A6DA6769D942BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1058C10DBF0A707047763B3B /* GoldenHour.app */,
+				AD9138880D930162B871FDDC /* GoldenHourTests.xctest */,
+				F40C9D531343676A4A789066 /* GoldenHourUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C636B4CC056A055C0A531483 /* GoldenHour */ = {
+			isa = PBXGroup;
+			children = (
+				470B79AFB5144FC3096C6683 /* App */,
+				7F578C4429780654214A89B6 /* DesignSystem */,
+				D8CECF44A2500E8964044B7D /* Features */,
+				D22D16109B1D11D1D733FB7D /* Models */,
+				ECCE6A5DBCD2F71FF07E126C /* Resources */,
+				D97829C831499EC94EAB57DD /* Services */,
+				B21799846E8CC7BF3DD12F74 /* Info.plist */,
+			);
+			path = GoldenHour;
+			sourceTree = "<group>";
+		};
+		D22D16109B1D11D1D733FB7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DDC47D3159BD7C42DCF7040 /* ActivePlace.swift */,
+				2FF6D8159412B83359BD8C44 /* PhotoSession.swift */,
+				A8AFD9DBF49D7ADF4F9F85A8 /* SavedPlace.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D8CECF44A2500E8964044B7D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				9E08810C7768883B59C75333 /* Calendar */,
+				9859ADD6BF7C904EFC970068 /* Compass */,
+				DA2735A50D3F2E7E3BD50920 /* Dashboard */,
+				828B5881F935E161056A34B9 /* Places */,
+				6FF568E50770E5F33910EFDD /* Planner */,
+				33DC7812A9FD6B9C54681591 /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D97829C831499EC94EAB57DD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DE844CC7B1C90BEF9189EA21 /* AppSettings.swift */,
+				9BD23D71FB0EC7C5A3B74102 /* LocationService.swift */,
+				40A8C1064211F6A988BCA301 /* NotificationService.swift */,
+				008A7A96E12A50A669DC2EBE /* PlaceSearchService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D9942583F96095A53414B98E /* GoldenHourUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9E4C84EA8BAAB2647765F440 /* GoldenHourUITests.swift */,
+			);
+			path = GoldenHourUITests;
+			sourceTree = "<group>";
+		};
+		DA2735A50D3F2E7E3BD50920 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				B5823ABF0CF54812E185AFFA /* DashboardView.swift */,
+				DD22AC86637DFA89DD6EF226 /* DayTimelineView.swift */,
+				6327F40BC5F3EF514541848D /* SolarDayDetailSections.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		ECCE6A5DBCD2F71FF07E126C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA1D07E75824D74EE330AC8F /* Assets.xcassets */,
+				12C5D566FD0B104478D7A627 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F609230B15A4121666CDFAD4 /* GoldenHourTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F3BCE9BF3BC56168BBC6518 /* AppLogicTests.swift */,
+			);
+			path = GoldenHourTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18D8624F5905E13718CF3786 /* GoldenHour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A568FD544A09E1DC682F0BE /* Build configuration list for PBXNativeTarget "GoldenHour" */;
+			buildPhases = (
+				9D2795D2767781214A7416FF /* Sources */,
+				E0583F56F547BE41BAC16CE1 /* Resources */,
+				7C8D21C0321A123C91AEDE61 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoldenHour;
+			packageProductDependencies = (
+				961AABA627F05FF29E655193 /* SolarEngine */,
+				CC3FD25C0E45D9E6AB960F29 /* GoldenHourCore */,
+			);
+			productName = GoldenHour;
+			productReference = 1058C10DBF0A707047763B3B /* GoldenHour.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B86F6006F41DA5C4853ECCA9 /* GoldenHourUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41B18DA05A2F7EA0ECFFE29D /* Build configuration list for PBXNativeTarget "GoldenHourUITests" */;
+			buildPhases = (
+				AA7B93299CD65B51A565EFC1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC94E1783507767AA4CEA138 /* PBXTargetDependency */,
+			);
+			name = GoldenHourUITests;
+			productName = GoldenHourUITests;
+			productReference = F40C9D531343676A4A789066 /* GoldenHourUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C4F7439A321AD6D8FAAB37EB /* GoldenHourTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35016C947A984BC5ECED0728 /* Build configuration list for PBXNativeTarget "GoldenHourTests" */;
+			buildPhases = (
+				4CA395CDCF6447D7A70D054D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC13C6945C08EC08990B890B /* PBXTargetDependency */,
+			);
+			name = GoldenHourTests;
+			productName = GoldenHourTests;
+			productReference = AD9138880D930162B871FDDC /* GoldenHourTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53263DD71922356D140FE775 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					18D8624F5905E13718CF3786 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					B86F6006F41DA5C4853ECCA9 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 18D8624F5905E13718CF3786;
+					};
+					C4F7439A321AD6D8FAAB37EB = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 77F393503D9E89A05ADF0298 /* Build configuration list for PBXProject "GoldenHour" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = fr;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				fr,
+			);
+			mainGroup = 54E5B064D07E668FEA8642ED;
+			packageReferences = (
+				BE85A572985DF24D65F355D4 /* XCLocalSwiftPackageReference "Packages/GoldenHourKit" */,
+			);
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18D8624F5905E13718CF3786 /* GoldenHour */,
+				C4F7439A321AD6D8FAAB37EB /* GoldenHourTests */,
+				B86F6006F41DA5C4853ECCA9 /* GoldenHourUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0583F56F547BE41BAC16CE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D2E2B7B2A6AC6EBD57CC5C0 /* Assets.xcassets in Resources */,
+				3B98161FBDF7C54ADE5F83D3 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CA395CDCF6447D7A70D054D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B872EF59653671D0B6ECB07 /* AppLogicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D2795D2767781214A7416FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A9E52E166DEE5FBC0FF218 /* ActivePlace.swift in Sources */,
+				70215D99F9D11CA9D2ECAF18 /* AppModel.swift in Sources */,
+				B7BE939ABA67E82F7FBF53E5 /* AppSettings.swift in Sources */,
+				1536A7944174924EC8219AD6 /* CompassDial.swift in Sources */,
+				10893828EF4C8042982D6EBC /* CompassView.swift in Sources */,
+				192699F03005C6A1BB833756 /* Components.swift in Sources */,
+				EEF3BCD3D841BB7A913963E7 /* DashboardView.swift in Sources */,
+				BDAA6D4FD460CC1A970685CF /* DayTimelineView.swift in Sources */,
+				6FB7CD062962A589EF7102A5 /* GoldenHourApp.swift in Sources */,
+				B851E6DFE40287FB9878B7A3 /* InformationViews.swift in Sources */,
+				2B06F4D1B75F1593E5121D03 /* LocationService.swift in Sources */,
+				2A8084802B703DEA42EC707D /* ManualCoordinateView.swift in Sources */,
+				D5BCFCFDFA019D11A9370974 /* NotificationService.swift in Sources */,
+				DBE86F73D633962D0F9FDA6A /* NotificationSettingsView.swift in Sources */,
+				920C4E985BFB3156EC33ABF4 /* Palette.swift in Sources */,
+				F40AE904711654A556C9E3CA /* PhotoSession.swift in Sources */,
+				21CA6C6D5D68D2583268E672 /* PlacePickerView.swift in Sources */,
+				0E93A6E4FC22BC9082090153 /* PlaceSearchService.swift in Sources */,
+				B25B118D1D0776BEA435F4D6 /* PlacesManagementView.swift in Sources */,
+				8006835E92C2CC18F63622D9 /* RootView.swift in Sources */,
+				165E25CE7E514035F388B71E /* SavedPlace.swift in Sources */,
+				258716B8CF7168A62433CF7E /* SessionDetailView.swift in Sources */,
+				05221B9D030003BBDE57F974 /* SessionEditorView.swift in Sources */,
+				94765178B8053D37FADB57DB /* SessionsListView.swift in Sources */,
+				DA61E5A27A569E3EA3606B2B /* SettingsView.swift in Sources */,
+				C0C677A812F3DCB825253466 /* SolarCalendarView.swift in Sources */,
+				87D5B5C16D8A6D75F26F8BD7 /* SolarDayDetailSections.swift in Sources */,
+				8317860FF6D54375EEBE6D31 /* SolarStrings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA7B93299CD65B51A565EFC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43AF3D52D6182AF5785D63ED /* GoldenHourUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC94E1783507767AA4CEA138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18D8624F5905E13718CF3786 /* GoldenHour */;
+			targetProxy = 3B3FA7CB40BE65EF2AF85E0A /* PBXContainerItemProxy */;
+		};
+		EC13C6945C08EC08990B890B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18D8624F5905E13718CF3786 /* GoldenHour */;
+			targetProxy = DAB0EC15882E0F983979E591 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02B4DC7442989BF2995E1CAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1D69427C13004AA2F8C2C10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GoldenHour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.goldenhour;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2B3FD0A50CC3FD7C6D4091A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.goldenhour.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoldenHour;
+			};
+			name = Release;
+		};
+		4285BD2EC40CD657DFE2F863 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GoldenHour/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.goldenhour;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5A73D41763932B83AED01310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.goldenhour.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldenHour.app/GoldenHour";
+			};
+			name = Release;
+		};
+		85B45949D5219525BE7749A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		89135E73949ACD9F1C2343DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.goldenhour.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoldenHour;
+			};
+			name = Debug;
+		};
+		EDD986AD08B5BE74C364B4F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.goldenhour.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldenHour.app/GoldenHour";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35016C947A984BC5ECED0728 /* Build configuration list for PBXNativeTarget "GoldenHourTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDD986AD08B5BE74C364B4F2 /* Debug */,
+				5A73D41763932B83AED01310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		41B18DA05A2F7EA0ECFFE29D /* Build configuration list for PBXNativeTarget "GoldenHourUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89135E73949ACD9F1C2343DB /* Debug */,
+				2B3FD0A50CC3FD7C6D4091A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		77F393503D9E89A05ADF0298 /* Build configuration list for PBXProject "GoldenHour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85B45949D5219525BE7749A3 /* Debug */,
+				02B4DC7442989BF2995E1CAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8A568FD544A09E1DC682F0BE /* Build configuration list for PBXNativeTarget "GoldenHour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4285BD2EC40CD657DFE2F863 /* Debug */,
+				1D69427C13004AA2F8C2C10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		BE85A572985DF24D65F355D4 /* XCLocalSwiftPackageReference "Packages/GoldenHourKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/GoldenHourKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		961AABA627F05FF29E655193 /* SolarEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SolarEngine;
+		};
+		CC3FD25C0E45D9E6AB960F29 /* GoldenHourCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GoldenHourCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 53263DD71922356D140FE775 /* Project object */;
+}
