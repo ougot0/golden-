@@ -43,6 +43,7 @@ jobs:
             -scheme GoldenHour \
             -destination "id=${{ steps.sim.outputs.udid }}" \
             -resultBundlePath TestResults.xcresult \
+            -skip-testing:GoldenHourUITests/ScreenshotTests \
             CODE_SIGNING_ALLOWED=NO \
             | tee xcodebuild.log | grep -E "error:|warning:|Test Case|Executed|TEST (SUCCEEDED|FAILED)|BUILD (SUCCEEDED|FAILED)" || true
           grep -q "TEST SUCCEEDED" xcodebuild.log
@@ -54,3 +55,45 @@ jobs:
           path: |
             TestResults.xcresult
             xcodebuild.log
+
+  screenshots:
+    name: App Store screenshots (iPhone 6.9")
+    runs-on: macos-15
+    needs: ios
+    steps:
+      - uses: actions/checkout@v4
+      - name: Boot an iPhone Pro Max simulator
+        id: sim
+        run: |
+          UDID=$(xcrun simctl list devices available -j | python3 -c '
+          import json, sys
+          data = json.load(sys.stdin)["devices"]
+          for runtime in sorted((k for k in data if "iOS" in k), reverse=True):
+              for device in data[runtime]:
+                  if device["name"].startswith("iPhone") and device["name"].endswith("Pro Max"):
+                      print(device["udid"]); sys.exit(0)
+          sys.exit(1)')
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID"
+          xcrun simctl status_bar "$UDID" override --time 9:41 --batteryState charged --batteryLevel 100 --cellularMode active --cellularBars 4 --wifiBars 3
+      - name: Capture (light and dark)
+        run: |
+          set -o pipefail
+          for appearance in light dark; do
+            xcrun simctl ui "${{ steps.sim.outputs.udid }}" appearance $appearance
+            xcodebuild test \
+              -project GoldenHour.xcodeproj -scheme GoldenHour \
+              -destination "id=${{ steps.sim.outputs.udid }}" \
+              -only-testing:GoldenHourUITests/ScreenshotTests \
+              -resultBundlePath Screens-$appearance.xcresult \
+              CODE_SIGNING_ALLOWED=NO | grep -E "error:|Test Case|TEST (SUCCEEDED|FAILED)" || true
+            mkdir -p screenshots/$appearance
+            xcrun xcresulttool export attachments --path Screens-$appearance.xcresult --output-path screenshots/$appearance
+          done
+          ls -R screenshots
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-store-screenshots
+          path: screenshots

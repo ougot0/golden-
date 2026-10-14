@@ -24,6 +24,7 @@
 		43AF3D52D6182AF5785D63ED /* GoldenHourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C84EA8BAAB2647765F440 /* GoldenHourUITests.swift */; };
 		49A9E52E166DEE5FBC0FF218 /* ActivePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC47D3159BD7C42DCF7040 /* ActivePlace.swift */; };
 		6FB7CD062962A589EF7102A5 /* GoldenHourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F59016B18E2A0C0EF551925 /* GoldenHourApp.swift */; };
+		6FFDF95A57A4890CD62833E3 /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D374FCE9901A7C4AE84196 /* ScreenshotTests.swift */; };
 		70215D99F9D11CA9D2ECAF18 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D9CBC1119E2858AC3E2AD1 /* AppModel.swift */; };
 		8006835E92C2CC18F63622D9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE11D5A1314B7034274D8A6 /* RootView.swift */; };
 		8317860FF6D54375EEBE6D31 /* SolarStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D565B3AEBFA2C193E949DF /* SolarStrings.swift */; };
@@ -95,6 +96,7 @@
 		D839E7D4C01F7DEF8E383BF6 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		DD22AC86637DFA89DD6EF226 /* DayTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTimelineView.swift; sourceTree = "<group>"; };
 		DE844CC7B1C90BEF9189EA21 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		E2D374FCE9901A7C4AE84196 /* ScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTests.swift; sourceTree = "<group>"; };
 		F368938F15DD66D1BBDB2158 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		F40C9D531343676A4A789066 /* GoldenHourUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GoldenHourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA21132B4C8BA5C427FD98F /* SessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailView.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				9E4C84EA8BAAB2647765F440 /* GoldenHourUITests.swift */,
+				E2D374FCE9901A7C4AE84196 /* ScreenshotTests.swift */,
 			);
 			path = GoldenHourUITests;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43AF3D52D6182AF5785D63ED /* GoldenHourUITests.swift in Sources */,
+				6FFDF95A57A4890CD62833E3 /* ScreenshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
