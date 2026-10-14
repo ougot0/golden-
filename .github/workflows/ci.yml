@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  engine-linux:
+    name: Solar engine tests (Linux)
+    runs-on: ubuntu-24.04
+    container: swift:6.0.3-noble
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test GoldenHourKit
+        run: swift test --package-path Packages/GoldenHourKit
+
+  ios:
+    name: iOS build and tests (simulator)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Xcode version
+        run: xcodebuild -version
+      - name: Pick an iPhone simulator
+        id: sim
+        run: |
+          UDID=$(xcrun simctl list devices available -j | python3 -c '
+          import json, sys
+          data = json.load(sys.stdin)["devices"]
+          runtimes = sorted((k for k in data if "iOS" in k), reverse=True)
+          for runtime in runtimes:
+              for device in data[runtime]:
+                  if device["name"].startswith("iPhone"):
+                      print(device["udid"]); sys.exit(0)
+          sys.exit(1)')
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+      - name: Build and test
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project GoldenHour.xcodeproj \
+            -scheme GoldenHour \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -resultBundlePath TestResults.xcresult \
+            CODE_SIGNING_ALLOWED=NO \
+            | tee xcodebuild.log | grep -E "error:|warning:|Test Case|Executed|TEST (SUCCEEDED|FAILED)|BUILD (SUCCEEDED|FAILED)" || true
+          grep -q "TEST SUCCEEDED" xcodebuild.log
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcode-results
+          path: |
+            TestResults.xcresult
+            xcodebuild.log
