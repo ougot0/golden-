@@ -2,7 +2,7 @@
 
 Application iPhone native (Swift, SwiftUI, SwiftData) pour photographes et vidéastes : heures dorées et bleues, lever et coucher du soleil, crépuscules, position du soleil, boussole solaire, planification de séances et rappels. Tous les calculs astronomiques se font **sur l'appareil, hors ligne**. Pas de serveur, pas de compte, pas de dépendance tierce, pas de publicité.
 
-> État de vérification : voir [Ce qui a été vérifié](#ce-qui-a-été-vérifié). Le moteur astronomique est testé ; l'application iOS doit encore être compilée et validée dans Xcode et sur un iPhone réel.
+> État de vérification : voir [Ce qui a été vérifié](#ce-qui-a-été-vérifié). L'app compile et tous les tests passent sur simulateur iOS (CI GitHub Actions) ; le comportement sur iPhone réel (GPS, boussole, notifications) reste à valider.
 
 ## Architecture
 
@@ -78,8 +78,8 @@ La CI (`.github/workflows/ci.yml`) exécute les tests du package sous Linux et c
 |---|---|
 | Moteur astronomique et logique (`GoldenHourKit`) | Compilé et **34 tests passés** (Swift 6.0.3, Linux) |
 | Précision vs Skyfield + JPL DE421 | 1 603 passages de seuils, 13 lieux (78° N à 55° S), 11 dates : écart max. 3,3 s sous 50° de latitude, 6,9 s entre 50° et 67°, 37 s au-delà ; midi solaire 2 s ; élévation 0,009° |
-| Code de l'app iOS | Syntaxe vérifiée (`swiftc -parse`) ; **pas encore compilé avec le SDK iOS** au moment de l'écriture (environnement Linux) — voir la CI macOS ou compiler dans Xcode |
-| Tests unitaires et UI de l'app | Écrits, **non exécutés** |
+| Compilation de l'app iOS | **Réussie** sur GitHub Actions (macOS 15, Xcode par défaut du runner, simulateur iPhone) |
+| Tests de l'app sur simulateur | **7 tests unitaires et 5 tests d'interface passés**, plus les 34 tests du package, dans le même run |
 | Comportement sur iPhone (GPS, boussole, notifications) | **Non vérifié** : voir [docs/LIMITES.md](docs/LIMITES.md) |
 
 ## Monétisation

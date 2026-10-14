@@ -22,7 +22,7 @@
 
 ## Ce qui n'a pas été vérifié
 
-Le code de l'application a été écrit dans un environnement Linux : il n'a pas été compilé avec le SDK iOS au moment de l'écriture (seule la syntaxe a été contrôlée) et les tests unitaires/UI de l'app n'ont pas été exécutés. La CI macOS (`.github/workflows/ci.yml`) le fait ; sinon, compiler dans Xcode avant toute autre vérification.
+L'app compile et ses tests (unitaires, interface, package) passent sur simulateur iOS dans la CI GitHub Actions. Rien n'a été exécuté sur un iPhone physique : capteurs (GPS, magnétomètre), notifications réelles, rendu en plein soleil et performances restent à vérifier avec la liste ci-dessous. Les tests d'interface tournent avec un lieu fixe (Paris) et ne couvrent pas les demandes d'autorisation.
 
 ## Vérifications à faire sur un iPhone réel
 
