@@ -69,6 +69,8 @@ jobs:
     name: App Store screenshots (iPhone 6.9")
     runs-on: macos-15
     needs: ios
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Boot an iPhone Pro Max simulator
@@ -97,8 +99,9 @@ jobs:
               -only-testing:GoldenHourUITests/ScreenshotTests \
               -resultBundlePath Screens-$appearance.xcresult \
               CODE_SIGNING_ALLOWED=NO | grep -E "error:|Test Case|TEST (SUCCEEDED|FAILED)" || true
-            mkdir -p screenshots/$appearance
-            xcrun xcresulttool export attachments --path Screens-$appearance.xcresult --output-path screenshots/$appearance
+            mkdir -p raw/$appearance screenshots/$appearance
+            xcrun xcresulttool export attachments --path Screens-$appearance.xcresult --output-path raw/$appearance
+            python3 tools/rename_screenshots.py raw/$appearance screenshots/$appearance
           done
           ls -R screenshots
       - name: Upload screenshots
@@ -106,3 +109,18 @@ jobs:
         with:
           name: app-store-screenshots
           path: screenshots
+      - name: Commit screenshots to the branch
+        if: github.event_name == 'push'
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add screenshots
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git commit -m "Update App Store screenshots [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && exit 0
+            sleep 5
+          done
+          exit 1
