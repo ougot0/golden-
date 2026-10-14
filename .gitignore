@@ -1,0 +1,15 @@
+# Xcode
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.xcresult
+# SwiftPM
+.build/
+.swiftpm/
+Packages/GoldenHourKit/.build/
+# Python
+.venv/
+__pycache__/
+# macOS
+.DS_Store
