@@ -46,6 +46,14 @@ enum SolarStrings {
     }
 }
 
+extension String {
+    /// "jeudi 15 octobre" → "Jeudi 15 octobre". Unlike `capitalized`, keeps month names in lowercase
+    /// as French typography requires.
+    var capitalizingFirstLetter: String {
+        prefix(1).uppercased() + dropFirst()
+    }
+}
+
 /// Formats times for a solar day, adding "(veille)" / "(lendemain)" when a bound falls on another day.
 struct DayTimeFormatter {
     let formatter: SolarTimeFormatter

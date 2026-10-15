@@ -58,16 +58,24 @@ struct SessionEditorView: View {
 
                 Section {
                     DatePicker("Date", selection: $day, in: SupportedDates.range(in: timeZone), displayedComponents: .date)
+                } header: {
+                    Text("Date")
+                }
+                .environment(\.timeZone, timeZone)
+
+                Section {
                     Picker("Lumière", selection: $anchor) {
                         ForEach(SessionLightAnchor.allCases) { Text($0.title).tag($0) }
                     }
+                    .pickerStyle(.inline)
+                    .labelsHidden()
                     if anchor == .customTime {
                         DatePicker("Heure", selection: $customTime, displayedComponents: .hourAndMinute)
                     } else {
                         anchorPreview
                     }
                 } header: {
-                    Text("Moment")
+                    Text("Lumière")
                 } footer: {
                     Text("Les heures sont celles du lieu (\(timeZone.identifier)).")
                 }

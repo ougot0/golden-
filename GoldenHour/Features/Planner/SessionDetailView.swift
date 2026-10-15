@@ -69,7 +69,7 @@ struct SessionDetailView: View {
                     .font(.system(.largeTitle, design: .default, weight: .light))
                     .monospacedDigit()
                     .foregroundStyle(Palette.amberText)
-                Text(formatter.string(from: session.start).capitalized)
+                Text(formatter.string(from: session.start).capitalizingFirstLetter)
                     .foregroundStyle(Palette.ink)
                 if let name = session.placeName {
                     Label(name, systemImage: "mappin.and.ellipse").foregroundStyle(Palette.inkSecondary)

@@ -12,7 +12,8 @@ final class ScreenshotTests: XCTestCase {
         super.setUp()
         continueAfterFailure = true
         app = XCUIApplication()
-        app.launchArguments = ["-ui-testing"]
+        // French App Store screenshots: French language and region (24-hour clock, Monday first).
+        app.launchArguments = ["-ui-testing", "-AppleLanguages", "(fr)", "-AppleLocale", "fr_FR"]
         app.launch()
     }
 
@@ -30,10 +31,11 @@ final class ScreenshotTests: XCTestCase {
         // 1–2. Dashboard: countdown and sun position, then timeline and golden/blue hours.
         XCTAssertTrue(app.staticTexts["Heures dorées et bleues"].waitForExistence(timeout: 10))
         snapshot("01-Aujourdhui")
-        app.swipeUp()
-        snapshot("02-Frise")
-        app.swipeUp()
-        snapshot("03-Heures")
+        // Half-screen drag so the second capture shows the middle of the page, not the bottom.
+        let start = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.75))
+        start.press(forDuration: 0.05, thenDragTo: app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.3)))
+        sleep(1)
+        snapshot("02-Heures")
 
         // 3. Calendar, month view.
         tabBar.buttons["Calendrier"].tap()
@@ -54,7 +56,8 @@ final class ScreenshotTests: XCTestCase {
         let title = app.textFields["sessionTitle"]
         XCTAssertTrue(title.waitForExistence(timeout: 5))
         title.tap()
-        title.typeText("Pont Alexandre III")
+        title.typeText("Pont Alexandre III\n")  // return dismisses the keyboard
+        sleep(1)
         snapshot("07-NouvelleSeance")
         app.buttons["saveSession"].tap()
         XCTAssertTrue(app.staticTexts["Pont Alexandre III"].waitForExistence(timeout: 5))

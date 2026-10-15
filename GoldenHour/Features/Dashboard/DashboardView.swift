@@ -51,15 +51,18 @@ struct DashboardView: View {
     private func content(place: ActivePlace) -> some View {
         let day = SolarDayCalculator.solarDay(for: model.selectedDate, coordinate: place.coordinate, timeZone: place.timeZone)
         VStack(alignment: .leading, spacing: 28) {
-            DateNavigator(
-                date: model.selectedDate,
-                timeZone: place.timeZone,
-                isToday: model.isShowingToday,
-                onPrevious: { model.selectedDate = model.selectedDate.adding(days: -1) },
-                onNext: { model.selectedDate = model.selectedDate.adding(days: 1) },
-                onToday: { model.selectedDate = model.today },
-                onPick: { showingDatePicker = true }
-            )
+            VStack(alignment: .leading, spacing: 4) {
+                PlaceHeader(place: place, action: { showingPlacePicker = true })
+                DateNavigator(
+                    date: model.selectedDate,
+                    timeZone: place.timeZone,
+                    isToday: model.isShowingToday,
+                    onPrevious: { model.selectedDate = model.selectedDate.adding(days: -1) },
+                    onNext: { model.selectedDate = model.selectedDate.adding(days: 1) },
+                    onToday: { model.selectedDate = model.today },
+                    onPick: { showingDatePicker = true }
+                )
+            }
             .padding(.top, 8)
 
             if place.timeZoneIsEstimated {
@@ -197,6 +200,32 @@ final class LightStatusCache {
     }
 }
 
+/// Name of the active place, always visible at the top of the dashboard; tapping it changes the place.
+private struct PlaceHeader: View {
+    let place: ActivePlace
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 6) {
+                Image(systemName: place.source == .currentLocation ? "location.fill" : "mappin.and.ellipse")
+                    .font(.subheadline)
+                Text(place.name)
+                    .font(.subheadline.weight(.semibold))
+                    .lineLimit(1)
+                Image(systemName: "chevron.down")
+                    .font(.caption.weight(.semibold))
+            }
+            .foregroundStyle(Palette.amberText)
+            .frame(minHeight: 44, alignment: .leading)
+            .padding(.leading, 12)
+        }
+        .accessibilityLabel("Lieu : \(place.name)")
+        .accessibilityHint("Changer de lieu")
+        .accessibilityIdentifier("placeHeader")
+    }
+}
+
 struct DateNavigator: View {
     let date: LocalDate
     let timeZone: TimeZone
@@ -246,7 +275,7 @@ struct DateNavigator: View {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.setLocalizedDateFormatFromTemplate("EEEEdMMMMyyyy")
-        return formatter.string(from: date.startOfDay(in: timeZone).addingTimeInterval(12 * 3600))
+        return formatter.string(from: date.startOfDay(in: timeZone).addingTimeInterval(12 * 3600)).capitalizingFirstLetter
     }
 }
 

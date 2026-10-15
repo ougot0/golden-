@@ -211,7 +211,7 @@ struct SolarCalendarView: View {
             return "\(a) – \(b)"
         case .month:
             formatter.setLocalizedDateFormatFromTemplate("MMMMyyyy")
-            return formatter.string(from: noon).capitalized
+            return formatter.string(from: noon).capitalizingFirstLetter
         }
     }
 
@@ -410,7 +410,7 @@ private struct WeekList: View {
         let formatter = DateFormatter()
         formatter.timeZone = day.timeZone
         formatter.setLocalizedDateFormatFromTemplate("EEEEdMMMM")
-        return formatter.string(from: day.interval.start.addingTimeInterval(12 * 3600)).capitalized
+        return formatter.string(from: day.interval.start.addingTimeInterval(12 * 3600)).capitalizingFirstLetter
     }
 }
 
