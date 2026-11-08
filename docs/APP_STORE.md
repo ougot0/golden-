@@ -30,6 +30,10 @@ PARTOUT, À TOUTE DATE
 • Régions polaires gérées : soleil de minuit, nuit polaire, journées sans heure dorée
 • Calendrier jour, semaine et mois, de 1900 à 2100
 
+MÉTÉO DE LA LUMIÈRE
+• Pour chaque heure dorée et bleue des 10 prochains jours : nuages, risque de pluie, température, heure par heure
+• Prévisions  Météo, actualisées à chaque ouverture
+
 BOUSSOLE SOLAIRE
 • Course du soleil sur la journée, directions du lever et du coucher
 • Cadran orienté selon votre iPhone quand la mesure est fiable — et clairement signalé quand elle ne l'est pas

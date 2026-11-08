@@ -9,6 +9,11 @@
 - Heure dorée et heure bleue : convention −4°/+6° et −6°/−4°, non universelle (voir [ASTRONOMIE.md](ASTRONOMIE.md)).
 - Le compte à rebours cherche la prochaine période sur 30 jours ; au-delà (nuit polaire profonde), il l'indique sans inventer de date.
 
+**Météo**
+- Prévisions Apple Météo (WeatherKit) sur 10 jours, heure par heure, uniquement avec une connexion. Mise en cache 30 minutes par lieu, actualisées à l'ouverture de l'app.
+- Nécessite la capacité WeatherKit sur l'identifiant de l'app ; tant qu'elle n'est pas active, l'app affiche « Météo indisponible » (le reste fonctionne).
+- Non visible dans les tests d'interface et les captures automatiques, qui tournent sans signature.
+
 **Application**
 - Interface en français uniquement (chaînes en dur ; pas encore de catalogue de traductions).
 - iPhone uniquement, en portrait.

@@ -33,6 +33,10 @@ targets:
         product: SolarEngine
       - package: GoldenHourKit
         product: GoldenHourCore
+    entitlements:
+      path: GoldenHour/GoldenHour.entitlements
+      properties:
+        com.apple.developer.weatherkit: true
     info:
       path: GoldenHour/Info.plist
       properties:

@@ -72,6 +72,9 @@ struct PrivacyPolicyView: View {
             InstrumentSection(title: "Position") {
                 Paragraph("Si vous l'autorisez, votre position est lue ponctuellement par l'iPhone pour calculer les heures du soleil et orienter la boussole. Elle reste sur l'appareil. Pour afficher le nom du lieu et son fuseau horaire, les coordonnées sont transmises au service de géocodage d'Apple, selon la politique de confidentialité d'Apple.")
             }
+            InstrumentSection(title: "Météo") {
+                Paragraph("Pour afficher les prévisions des heures dorées et bleues, les coordonnées du lieu affiché sont envoyées au service Apple Météo (WeatherKit), régi par la politique de confidentialité d'Apple. Aucune donnée ne transite par GoldenHour.")
+            }
             InstrumentSection(title: "Recherche de lieux") {
                 Paragraph("Le texte saisi dans la recherche est envoyé au service Plans d'Apple pour proposer des résultats. GoldenHour n'en conserve aucune trace.")
             }
@@ -110,7 +113,7 @@ struct AboutView: View {
                 ValueRow(label: "Calculs", value: "Sur l'appareil, hors ligne")
             }
             InstrumentSection(title: "Composants") {
-                Paragraph("GoldenHour n'utilise aucune bibliothèque tierce : uniquement SwiftUI, SwiftData, Core Location, MapKit et UserNotifications d'Apple. Les algorithmes astronomiques sont issus de Jean Meeus, Astronomical Algorithms (Willmann-Bell, 1998), et de F. Espenak et J. Meeus pour ΔT (NASA/TP-2006-214141).")
+                Paragraph("GoldenHour n'utilise aucune bibliothèque tierce : uniquement SwiftUI, SwiftData, Core Location, MapKit, WeatherKit et UserNotifications d'Apple. Prévisions météo :  Météo. Les algorithmes astronomiques sont issus de Jean Meeus, Astronomical Algorithms (Willmann-Bell, 1998), et de F. Espenak et J. Meeus pour ΔT (NASA/TP-2006-214141).")
             }
         }
     }

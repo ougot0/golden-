@@ -85,6 +85,11 @@ struct DashboardView: View {
                 }
             }
 
+            // UI tests run unsigned, without the WeatherKit entitlement: no weather there.
+            if !LaunchConfiguration.current.isUITesting {
+                WeatherSection(day: day)
+            }
+
             if model.isShowingToday {
                 TimelineView(.everyMinute) { context in
                     SolarDayDetailSections(day: day, now: context.date)

@@ -39,7 +39,8 @@ Ce guide couvre tout ce qui reste à faire de votre côté pour publier GoldenHo
 2. Au centre, sous **TARGETS**, sélectionnez **GoldenHour**, puis ouvrez l'onglet **Signing & Capabilities**.
 3. Dans **Team**, choisissez votre compte. S'il n'apparaît pas, ajoutez-le via **Xcode › Settings › Accounts › +**.
 4. Dans **Bundle Identifier**, remplacez `com.example.goldenhour` par un identifiant unique, par exemple `com.votrenom.goldenhour`. Cet identifiant ne pourra plus changer après la publication.
-5. Faites la même chose pour les cibles **GoldenHourTests** et **GoldenHourUITests**, avec le même identifiant suivi de `.tests` et `.uitests`.
+5. Toujours dans **Signing & Capabilities**, vérifiez que **WeatherKit** apparaît. Sur <https://developer.apple.com/account/resources/identifiers/list>, ouvrez votre identifiant et cochez **WeatherKit** dans les onglets **Capabilities** et **App Services**.
+6. Faites la même chose pour les cibles **GoldenHourTests** et **GoldenHourUITests**, avec le même identifiant suivi de `.tests` et `.uitests`.
 
 ## Étape 4 — Installer l'app sur votre iPhone (15 min)
 

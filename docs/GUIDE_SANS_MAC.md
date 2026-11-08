@@ -22,7 +22,13 @@ Tout se fait dans un navigateur et sur votre iPhone. Un Mac hébergé par GitHub
 3. Remplissez :
    - **Description** : `GoldenHour` ;
    - **Bundle ID** : cochez **Explicit**, puis saisissez par exemple `com.votrenom.goldenhour`. Ne mettez que des minuscules, des chiffres et des points. Cet identifiant ne pourra plus changer.
-4. Ne cochez aucune *Capability*. Cliquez sur **Continue › Register**.
+4. Activez la météo :
+   - dans l'onglet **Capabilities**, cochez **WeatherKit** ;
+   - dans l'onglet **App Services**, cochez aussi **WeatherKit**.
+
+   Ne cochez rien d'autre. Cliquez sur **Continue › Register**.
+
+   Si l'identifiant existe déjà, ouvrez-le dans la liste, cochez WeatherKit dans les deux onglets, puis cliquez sur **Save**. L'activation du service peut prendre jusqu'à 30 minutes. Pendant ce délai, l'app affiche « Météo indisponible ».
 
 ## 3. Créer la fiche de l'app (5 min)
 

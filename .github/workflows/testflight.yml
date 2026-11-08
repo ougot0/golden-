@@ -12,8 +12,10 @@ name: TestFlight
 #     ASC_ISSUER_ID   App Store Connect issuer ID
 #     ASC_KEY_P8      full text of the AuthKey_XXXX.p8 file
 #
-# Signing uses Xcode's automatic signing with the API key: certificates and the App Store
+# The archive is signed ad hoc (it keeps its entitlements, WeatherKit included); the export step then
+# re-signs it for the App Store with automatic signing and the API key: certificates and the
 # provisioning profile are created and managed by Apple (cloud signing); nothing to install.
+# The App ID must have the WeatherKit capability and app service enabled (see the guide).
 
 on:
   workflow_dispatch:
@@ -72,10 +74,14 @@ jobs:
             DEVELOPMENT_TEAM="$TEAM_ID" \
             PRODUCT_BUNDLE_IDENTIFIER="$BUNDLE_ID" \
             CURRENT_PROJECT_VERSION="${{ github.run_number }}" \
-            CODE_SIGN_STYLE=Automatic \
+            CODE_SIGN_STYLE=Manual \
+            CODE_SIGN_IDENTITY=- \
             CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO \
             | tee archive.log | grep -E "error:|warning: .*GoldenHour|ARCHIVE (SUCCEEDED|FAILED)"
+
+      - name: Check WeatherKit entitlement
+        run: |
+          codesign -d --entitlements :- "$RUNNER_TEMP/GoldenHour.xcarchive/Products/Applications/GoldenHour.app" | grep -q "com.apple.developer.weatherkit"
 
       - name: Sign and upload (cloud signing)
         run: |

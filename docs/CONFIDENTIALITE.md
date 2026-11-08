@@ -14,6 +14,10 @@ Si vous l'autorisez, GoldenHour lit votre position ponctuellement pour calculer 
 
 L'autorisation est facultative : vous pouvez rechercher un lieu ou saisir des coordonnées.
 
+## Météo
+
+Pour afficher les prévisions des heures dorées et bleues, les coordonnées du lieu affiché sont envoyées au service Apple Météo (WeatherKit), régi par la politique de confidentialité d'Apple. Aucune donnée ne transite par l'éditeur.
+
 ## Recherche de lieux
 
 Le texte saisi dans la recherche est transmis au service Plans d'Apple pour proposer des résultats. GoldenHour n'en conserve aucune trace.

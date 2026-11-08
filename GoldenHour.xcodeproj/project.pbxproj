@@ -23,6 +23,7 @@
 		3D2E2B7B2A6AC6EBD57CC5C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA1D07E75824D74EE330AC8F /* Assets.xcassets */; };
 		43AF3D52D6182AF5785D63ED /* GoldenHourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C84EA8BAAB2647765F440 /* GoldenHourUITests.swift */; };
 		49A9E52E166DEE5FBC0FF218 /* ActivePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC47D3159BD7C42DCF7040 /* ActivePlace.swift */; };
+		4D3D83B36DB6301A158635DD /* WeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C8B44CC3DA177D470B87C7 /* WeatherProvider.swift */; };
 		6FB7CD062962A589EF7102A5 /* GoldenHourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F59016B18E2A0C0EF551925 /* GoldenHourApp.swift */; };
 		6FFDF95A57A4890CD62833E3 /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D374FCE9901A7C4AE84196 /* ScreenshotTests.swift */; };
 		70215D99F9D11CA9D2ECAF18 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D9CBC1119E2858AC3E2AD1 /* AppModel.swift */; };
@@ -34,6 +35,7 @@
 		B25B118D1D0776BEA435F4D6 /* PlacesManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AED48850218FAC1B71C4064 /* PlacesManagementView.swift */; };
 		B7BE939ABA67E82F7FBF53E5 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE844CC7B1C90BEF9189EA21 /* AppSettings.swift */; };
 		B851E6DFE40287FB9878B7A3 /* InformationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341A2A1941288CB290E5F66 /* InformationViews.swift */; };
+		BC137E65F6D7D6BB73E2292C /* WeatherSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B40DA823FDC7E4B50A3ED3 /* WeatherSection.swift */; };
 		BDAA6D4FD460CC1A970685CF /* DayTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22AC86637DFA89DD6EF226 /* DayTimelineView.swift */; };
 		C0C677A812F3DCB825253466 /* SolarCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39080FD5F714A091A045B4C /* SolarCalendarView.swift */; };
 		D5BCFCFDFA019D11A9370974 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8C1064211F6A988BCA301 /* NotificationService.swift */; };
@@ -68,6 +70,7 @@
 		12C5D566FD0B104478D7A627 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		1341A2A1941288CB290E5F66 /* InformationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViews.swift; sourceTree = "<group>"; };
 		162DA9C2C39E4A74087A67A4 /* PlacePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePickerView.swift; sourceTree = "<group>"; };
+		18210955FFBD05ABF10EB657 /* GoldenHour.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoldenHour.entitlements; sourceTree = "<group>"; };
 		1AED48850218FAC1B71C4064 /* PlacesManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesManagementView.swift; sourceTree = "<group>"; };
 		1D63C1A0F14A5AB1A0687DDB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1DDC47D3159BD7C42DCF7040 /* ActivePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePlace.swift; sourceTree = "<group>"; };
@@ -82,10 +85,12 @@
 		6327F40BC5F3EF514541848D /* SolarDayDetailSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarDayDetailSections.swift; sourceTree = "<group>"; };
 		79D9CBC1119E2858AC3E2AD1 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		869ADB94E31D6848F7529A93 /* CompassDial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassDial.swift; sourceTree = "<group>"; };
+		86B40DA823FDC7E4B50A3ED3 /* WeatherSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSection.swift; sourceTree = "<group>"; };
 		87D565B3AEBFA2C193E949DF /* SolarStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarStrings.swift; sourceTree = "<group>"; };
 		8F59016B18E2A0C0EF551925 /* GoldenHourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenHourApp.swift; sourceTree = "<group>"; };
 		9BD23D71FB0EC7C5A3B74102 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		9E4C84EA8BAAB2647765F440 /* GoldenHourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenHourUITests.swift; sourceTree = "<group>"; };
+		A1C8B44CC3DA177D470B87C7 /* WeatherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProvider.swift; sourceTree = "<group>"; };
 		A39080FD5F714A091A045B4C /* SolarCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarCalendarView.swift; sourceTree = "<group>"; };
 		A8AFD9DBF49D7ADF4F9F85A8 /* SavedPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlace.swift; sourceTree = "<group>"; };
 		AD9138880D930162B871FDDC /* GoldenHourTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GoldenHourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +225,7 @@
 				D22D16109B1D11D1D733FB7D /* Models */,
 				ECCE6A5DBCD2F71FF07E126C /* Resources */,
 				D97829C831499EC94EAB57DD /* Services */,
+				18210955FFBD05ABF10EB657 /* GoldenHour.entitlements */,
 				B21799846E8CC7BF3DD12F74 /* Info.plist */,
 			);
 			path = GoldenHour;
@@ -255,6 +261,7 @@
 				9BD23D71FB0EC7C5A3B74102 /* LocationService.swift */,
 				40A8C1064211F6A988BCA301 /* NotificationService.swift */,
 				008A7A96E12A50A669DC2EBE /* PlaceSearchService.swift */,
+				A1C8B44CC3DA177D470B87C7 /* WeatherProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -274,6 +281,7 @@
 				B5823ABF0CF54812E185AFFA /* DashboardView.swift */,
 				DD22AC86637DFA89DD6EF226 /* DayTimelineView.swift */,
 				6327F40BC5F3EF514541848D /* SolarDayDetailSections.swift */,
+				86B40DA823FDC7E4B50A3ED3 /* WeatherSection.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -450,6 +458,8 @@
 				C0C677A812F3DCB825253466 /* SolarCalendarView.swift in Sources */,
 				87D5B5C16D8A6D75F26F8BD7 /* SolarDayDetailSections.swift in Sources */,
 				8317860FF6D54375EEBE6D31 /* SolarStrings.swift in Sources */,
+				4D3D83B36DB6301A158635DD /* WeatherProvider.swift in Sources */,
+				BC137E65F6D7D6BB73E2292C /* WeatherSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GoldenHour/GoldenHour.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GoldenHour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -580,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GoldenHour/GoldenHour.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GoldenHour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
