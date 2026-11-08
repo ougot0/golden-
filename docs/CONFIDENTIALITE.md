@@ -2,7 +2,7 @@
 
 *Texte à publier à une URL publique et à renseigner dans App Store Connect. Compléter l'éditeur, le contact et la date.*
 
-**Éditeur** : [nom ou société] — **Contact** : [adresse e-mail] — **Dernière mise à jour** : [date]
+**Éditeur** : Alon Marec — **Contact** : marecyotam27@gmail.com — **Dernière mise à jour** : 8 novembre 2026
 
 ## En résumé
 
@@ -36,4 +36,4 @@ L'application ne collecte aucune donnée, y compris auprès des enfants.
 
 ## Contact
 
-Pour toute question : [adresse e-mail].
+Pour toute question : marecyotam27@gmail.com.
